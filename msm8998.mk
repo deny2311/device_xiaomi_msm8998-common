@@ -358,6 +358,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.1 \
     android.hardware.radio@1.1 \
+    CarrierConfigOverlay \
     librmnetctl
 
 # Seccomp policy
