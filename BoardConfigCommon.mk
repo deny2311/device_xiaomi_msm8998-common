@@ -18,6 +18,9 @@ BOARD_VENDOR := xiaomi
 
 PLATFORM_PATH := device/xiaomi/msm8998-common
 
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS :=true
+BUILD_BROKEN_DUP_RULES := true
+
 TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
 
 # Architecture
