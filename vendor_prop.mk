@@ -98,7 +98,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.qcom.bluetooth.soc=cherokee
+    vendor.qcom.bluetooth.soc=cherokee \
+    persist.vendor.bt.a2dp.aac_whitelist=false \
+    persist.vendor.bt.a2dp.hal.implementation=true \
+    persist.vendor.bt.aac_frm_ctl.enabled=true \
+    persist.vendor.btstack.enable.twsplus=true \
+    persist.vendor.btstack.enable.twsplussho=true \
+    ro.bluetooth.library_name=libbluetooth_qti.so
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
