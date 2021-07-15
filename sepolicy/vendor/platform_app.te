@@ -1,0 +1,7 @@
+# System Info
+allow platform_app sysfs_kgsl:file { read open getattr };
+allow platform_app sysfs_battery_supply:dir { search };
+allow platform_app sysfs_battery_supply:file { read open getattr };
+allow platform_app sysfs_graphics:dir { search };
+allow platform_app sysfs_graphics:file { read open getattr };
+allow platform_app sysfs_batteryinfo:dir { search };
