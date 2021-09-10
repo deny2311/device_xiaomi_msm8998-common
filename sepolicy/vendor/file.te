@@ -14,3 +14,6 @@ type sysfs_kcal, sysfs_type, fs_type;
 
 # FastCharge
 type sysfs_fastcharge, sysfs_type, fs_type;
+
+# FPS Info
+type sysfs_fps, sysfs_type, fs_type;

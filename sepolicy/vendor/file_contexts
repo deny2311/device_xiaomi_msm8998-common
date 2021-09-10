@@ -46,3 +46,6 @@
 
 # WiFi
 /vendor/bin/wifi-mac-generator                                u:object_r:wifi-mac-generator_exec:s0
+
+# FPS tile
+/sys/devices/virtual/graphics/fb0/measured_fps                         u:object_r:sysfs_fps:s0
