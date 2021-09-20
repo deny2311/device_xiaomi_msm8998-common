@@ -29,6 +29,9 @@
             <intent-filter>
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
+            </intent-filter>
             <meta-data android:name="com.android.settings.category" android:value="com.android.settings.category.ia.homepage" />
             <meta-data android:name="com.android.settings.icon" android:resource="@drawable/ic_mi" />
             <meta-data android:name="com.android.settings.bg.hint" android:resource="@color/mi_background_icon_color"/>
@@ -43,5 +46,15 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+		
+        <service android:name=".SpectrumTileService"
+            android:icon="@drawable/ic_spectrum"
+            android:label="@string/spectrum_profile_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
     </application>
 </manifest>
