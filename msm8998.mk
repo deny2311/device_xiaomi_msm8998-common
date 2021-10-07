@@ -425,6 +425,10 @@ PRODUCT_PACKAGES += \
     libmediaextractorservice \
     libnl
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images
+
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
