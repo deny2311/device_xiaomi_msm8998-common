@@ -234,6 +234,8 @@ on charger
     write /sys/devices/soc/1da4000.ufshc/clkscale_enable 1
     write /sys/devices/soc/1da4000.ufshc/clkgate_enable 1
 
+    setprop persist.sys.usb.config mass_storage
+
     start vendor.hvdcp_opti
     start vendor.thermal-engine
     start vendor.qcom-post-boot
