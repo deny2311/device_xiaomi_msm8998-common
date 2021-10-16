@@ -25,7 +25,7 @@
 /(mnt/vendor)/persist/PRSensorData\.txt                       u:object_r:sensors_persist_file:s0
 
 # Adaptive Charging
-/sys/class/power_supply/battery/input_suspend                 u:object_r:vendor_sysfs_battery_supply:s0
+/sys/class/power_supply/battery/input_suspend                 u:object_r:sysfs_battery_supply:s0
 
 # Sweep2sleep
 /sys/sweep2sleep/sweep2sleep                                  u:object_r:sysfs_sts:s0
