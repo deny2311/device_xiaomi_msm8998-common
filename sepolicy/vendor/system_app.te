@@ -1,3 +1,5 @@
+set_prop(system_app,exported_radio_prop)
+
 # Parts
 allow system_app sysfs_sectouch:file rwx_file_perms;
 allow system_app sysfs_leds:dir search;
