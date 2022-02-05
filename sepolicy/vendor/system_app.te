@@ -1,4 +1,5 @@
 set_prop(system_app,exported_radio_prop)
+binder_call(system_app, hal_alarm_qti_default)
 
 # Parts
 allow system_app sysfs_sectouch:file rwx_file_perms;
@@ -22,3 +23,5 @@ allow system_app sysfs_zram:file r_file_perms;
 
 # FPS tile
 allow system_app sysfs:file { getattr };
+
+allow system_app mnt_vendor_file:dir { search };
