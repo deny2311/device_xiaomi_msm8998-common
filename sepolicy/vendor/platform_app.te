@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 # FPS tile
 allow platform_app sysfs_fps:file { getattr open read };
+=======
+allow platform_app per_boot_file:file read;
+>>>>>>> 9e438bc (msm8998-common: sepolicy: Add some rules)

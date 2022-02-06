@@ -1,0 +1,1 @@
+allow untrusted_app per_boot_file:file read;
