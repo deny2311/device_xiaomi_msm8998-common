@@ -11,3 +11,5 @@ set_prop(vendor_init, vendor_qcom_ims_prop)
 
 allow vendor_init media_rw_data_file:file { relabelfrom };
 allow vendor_init tombstone_data_file:dir { search };
+
+set_prop(vendor_init, vendor_power_prop)
