@@ -143,6 +143,7 @@ TARGET_USES_OLD_MNC_FORMAT := true
 VENDOR_SECURITY_PATCH := 2020-01-01
 
 # SELinux
+TARGET_SEPOLICY_DIR := msm8998
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 #BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/vendor
 #BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(PLATFORM_PATH)/sepolicy/public
