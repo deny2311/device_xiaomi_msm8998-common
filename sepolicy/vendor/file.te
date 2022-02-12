@@ -18,9 +18,6 @@ type sysfs_fastcharge, sysfs_type, fs_type;
 
 # FPS Info
 type sysfs_fps, sysfs_type, fs_type;
-<<<<<<< HEAD
-=======
 
 # kernel
 type per_boot_file, file_type, data_file_type, core_data_file_type;
->>>>>>> 9e438bc (msm8998-common: sepolicy: Add some rules)

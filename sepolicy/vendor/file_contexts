@@ -46,11 +46,7 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator@1\.1-service\.msm8998 u:object_r:hal_vibrator_default_exec:s0
 
 # WiFi
-<<<<<<< HEAD
 /vendor/bin/wifi-mac-generator                                u:object_r:wifi-mac-generator_exec:s0
 
 # FPS tile
 /sys/devices/virtual/graphics/fb0/measured_fps                         u:object_r:sysfs_fps:s0
-=======
-/vendor/bin/wifi-mac-generator                                u:object_r:wifi-mac-generator_exec:s0
->>>>>>> 9e438bc (msm8998-common: sepolicy: Add some rules)
