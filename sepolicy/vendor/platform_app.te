@@ -1,1 +1,4 @@
 allow platform_app per_boot_file:file read;
+allow platform_app sysfs_fps:file { read };
+allow platform_app sysfs_fps:file { open };
+allow platform_app sysfs_fps:file { getattr };

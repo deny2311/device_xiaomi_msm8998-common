@@ -7,3 +7,6 @@ allow gmscore_app exported_camera_prop:file rw_file_perms;
 get_prop(gmscore_app, exported_camera_prop)
 
 allow gmscore_app per_boot_file:file read;
+get_prop(gmscore_app, aac_drc_prop)
+get_prop(gmscore_app, ab_update_gki_prop)
+get_prop(gmscore_app, adbd_prop)

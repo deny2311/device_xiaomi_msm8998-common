@@ -6,3 +6,6 @@ allow priv_app userspace_reboot_config_prop:file rw_file_perms;
 get_prop(priv_app, userspace_reboot_config_prop)
 
 allow priv_app per_boot_file:file read;
+set_prop(priv_app, default_prop)
+allow priv_app init:unix_stream_socket { connectto };
+set_prop(priv_app, property_socket)
