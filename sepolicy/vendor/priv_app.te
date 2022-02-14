@@ -4,3 +4,5 @@ dontaudit priv_app mnt_vendor_file:dir search;
 
 allow priv_app userspace_reboot_config_prop:file rw_file_perms;
 get_prop(priv_app, userspace_reboot_config_prop)
+
+allow priv_app per_boot_file:file read;

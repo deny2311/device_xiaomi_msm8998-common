@@ -1,13 +1,13 @@
-type_transition vendor_thermal-engine socket_device:sock_file thermal_socket;
+type_transition thermal-engine socket_device:sock_file thermal_socket;
 
-allow vendor_thermal-engine thermal_data_file:dir rw_dir_perms;
-allow vendor_thermal-engine thermal_data_file:file create_file_perms;
+allow thermal-engine thermal_data_file:dir rw_dir_perms;
+allow thermal-engine thermal_data_file:file create_file_perms;
 
-allow vendor_thermal-engine thermal_decrypt_file:file create_file_perms;
+allow thermal-engine thermal_decrypt_file:file create_file_perms;
 
-allow vendor_thermal-engine self:capability { chown fowner };
-dontaudit vendor_thermal-engine self:capability dac_override;
+allow thermal-engine self:capability { chown fowner };
+dontaudit thermal-engine self:capability dac_override;
 
-set_prop(vendor_thermal-engine, vendor_thermal_prop);
+set_prop(thermal-engine, vendor_thermal_prop);
 
-allow vendor_thermal-engine sysfs:dir r_dir_perms;
+allow thermal-engine sysfs:dir r_dir_perms;

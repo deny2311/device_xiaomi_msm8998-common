@@ -25,3 +25,5 @@ allow system_app sysfs_zram:file r_file_perms;
 allow system_app sysfs:file { getattr };
 
 allow system_app mnt_vendor_file:dir { search };
+
+allow system_app per_boot_file:file read;
