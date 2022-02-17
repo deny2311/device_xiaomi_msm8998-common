@@ -4,4 +4,5 @@ allow init vfat:dir { search };
 allow init per_boot_file:file ioctl;
 allow init vendor_file:file { execute_no_trans };
 allowxperm init per_boot_file:file ioctl { F2FS_IOC_SET_PIN_FILE };
-binder_call(init, servicemanager)
+binder_call(init, hwservicemanager)
+binder_call(init, hal_perf_default)

@@ -1,1 +1,0 @@
-allow netmgrd exported_radio_prop:file { getattr open read };
