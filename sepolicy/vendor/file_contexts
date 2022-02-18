@@ -50,3 +50,7 @@
 
 # FPS tile
 /sys/devices/virtual/graphics/fb0/measured_fps                         u:object_r:sysfs_fps:s0
+
+# OIS
+/sys/kernel/ois_control/gyro_cal		                u:object_r:sysfs_ois:s0
+/sys/kernel/range/cal_data		                        u:object_r:sysfs_ois:s0 

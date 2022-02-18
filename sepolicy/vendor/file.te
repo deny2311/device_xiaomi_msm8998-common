@@ -22,3 +22,5 @@ type sysfs_fps, sysfs_type, fs_type;
 #kernel
 type per_boot_file, file_type, data_file_type, core_data_file_type;
 
+#OIS
+type sysfs_ois, sysfs_type, fs_type;
