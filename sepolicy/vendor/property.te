@@ -8,7 +8,7 @@ vendor_public_prop(vendor_fp_prop)
 type sensors_panel_prop, property_type;
 
 # Thermal engine
-type vendor_thermal_prop, property_type;
+type thermal_prop, property_type;
 
 # Dirac
 type dirac_prop, property_type;
