@@ -90,6 +90,11 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default \
 
+# IFAA
+PRODUCT_PACKAGES += \
+    IFAAService \
+    org.ifaa.android.manager
+     
 PRODUCT_PACKAGES += \
     libaudio-resampler \
     libhfp \
@@ -351,7 +356,6 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-vendorcompat
 
 # Properties
-include $(LOCAL_PATH)/default_prop.mk
 include $(LOCAL_PATH)/system_prop.mk
 include $(LOCAL_PATH)/vendor_prop.mk
 
@@ -359,8 +363,6 @@ include $(LOCAL_PATH)/vendor_prop.mk
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
-    PRODUCT_BOARD_PLATFORM := msm8998
-    PRODUCT_USES_QCOM_HARDWARE := true
 
 # QMI
 PRODUCT_PACKAGES += \
