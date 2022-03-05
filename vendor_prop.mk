@@ -203,7 +203,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.redir_party_num=1 \
     persist.vendor.radio.report_codec=1 \
     persist.vendor.radio.sib16_support=1 \
-    rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
     ro.telephony.default_cdma_sub=0 \
     ro.telephony.default_network=22,22 \
     ro.vendor.use_data_netmgrd=true \
@@ -240,6 +239,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.early_app_phase_offset_ns=1500000 \
     debug.sf.early_gl_phase_offset_ns=3000000 \
     debug.sf.early_gl_app_phase_offset_ns=15000000
+
+# System
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.binary_xml=false
 
 # Time services
 PRODUCT_PROPERTY_OVERRIDES += \
