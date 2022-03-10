@@ -23,10 +23,6 @@ gf.debug.                                                     u:object_r:vendor_
 persist.vendor.sys.fp.                                        u:object_r:vendor_fp_prop:s0
 ro.boot.fpsensor                                              u:object_r:vendor_fp_prop:s0
 
-# Mlipay
-persist.vendor.sys.pay.ifaa                                   u:object_r:vendor_tee_listener_prop:s0
-persist.vendor.sys.pay.soter                                  u:object_r:vendor_tee_listener_prop:s0
-
 # Radio
 persist.sys.labtest_flag                                      u:object_r:exported_radio_prop:s0
 ro.build.software.version                                     u:object_r:vendor_qcom_ims_prop:s0
@@ -35,8 +31,10 @@ ro.miui.                                                      u:object_r:exporte
 ro.product.mod_device                                         u:object_r:exported_radio_prop:s0
 ril.fake_bs_flag0                                             u:object_r:vendor_radio_prop:s0
 ril.fake_bs_flag1                                             u:object_r:vendor_radio_prop:s0
-persist.vendor.data.shsusr_load                               u:object_r:vendor_radio_prop:s0
-persist.vendor.data.qmipriod_load                             u:object_r:vendor_radio_prop:s0
+#persist.vendor.data.shs_ko_load                               u:object_r:vendor_radio_prop:s0
+#persist.vendor.data.shsusr_load                               u:object_r:vendor_radio_prop:s0
+#persist.vendor.data.perf_ko_load                              u:object_r:vendor_radio_prop:s0
+#persist.vendor.data.qmipriod_load                             u:object_r:vendor_radio_prop:s0
 
 # Recovery
 ro.build.expect.firmware                                      u:object_r:exported_default_prop:s0
