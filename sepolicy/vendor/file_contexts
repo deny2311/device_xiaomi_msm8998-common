@@ -35,6 +35,9 @@
 /data/decrypt\.txt                                            u:object_r:thermal_decrypt_file:s0
 /data/vendor/thermal(/.*)?                                    u:object_r:thermal_data_file:s0
 
+# UFS
+/sys/devices/soc/1da4000.ufshc(/.*)?                         u:object_r:sysfs_ufs:s0
+
 # Vibrator
 /sys/devices/virtual/timed_output/vibrator/(/.*)?             u:object_r:sysfs_vibrator:s0
 
