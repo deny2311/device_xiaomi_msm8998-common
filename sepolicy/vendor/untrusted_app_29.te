@@ -1,0 +1,5 @@
+allow untrusted_app_29 hal_cacert_hwservice:hwservice_manager { add find };
+allow untrusted_app_29 self:socket { create };
+allow untrusted_app_29 vendor_file:file { read open getattr execute };
+
+get_prop(untrusted_app_29, vendor_persist_camera_prop)
