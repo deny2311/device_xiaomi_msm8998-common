@@ -1,0 +1,2 @@
+# Google Battery
+vendor.google.google_battery::IGoogleBattery                  u:object_r:google_battery_hwservice:s0
