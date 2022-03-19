@@ -1,0 +1,125 @@
+# ART
+dalvik.vm.boot-dex2oat-threads=8
+dalvik.vm.dex2oat-threads=8
+dalvik.vm.dex2oat64.enabled=true
+dalvik.vm.image-dex2oat-threads=8
+ro.sys.fw.dex2oat_thread_count=8
+
+# Audio
+aaudio.hw_burst_min_usec=2000
+aaudio.mmap_exclusive_policy=2
+aaudio.mmap_policy=2
+af.fast_track_multiplier=2
+audio.deep_buffer.media=true
+audio.offload.min.duration.secs=15
+audio.offload.video=true
+persist.audio.dirac.speaker=true
+ro.config.media_vol_steps=25
+ro.config.vc_call_vol_steps=11
+
+# Camera
+camera.shutter_sound.blacklist=com.android.camera
+persist.camera.eis.enable=1
+persist.camera.privapp.list=com.android.camera,com.google.android.GoogleCamera,org.codeaurora.snapcam
+persist.camera.set.afd=4
+persist.camera.stats.test=5
+persist.camera.xm.green.b=0.96
+persist.camera.xm.green.r=0.97
+vendor.camera.aux.packagelist=com.android.camera,org.lineageos.snap
+vidc.enc.dcvs.extra-buff-count=2
+
+# Charger
+ro.charger.enable_suspend=true
+
+# Display
+# Disable vsync for cpu rendered apps
+debug.cpurend.vsync=false
+debug.gralloc.enable_fb_ubwc=1
+debug.hwui.use_buffer_age=false
+debug.sf.disable_backpressure=1
+debug.sf.hw=1
+debug.sf.latch_unsignaled=0
+debug.sf.recomputecrop=0
+renderthread.skia.reduceopstasksplitting=true
+ro.hardware.egl=adreno
+ro.hardware.vulkan=adreno
+ro.opengles.version=196610
+
+# DRM
+drm.service.enabled=true
+
+# FRP
+ro.frp.pst=/dev/block/platform/soc/1da4000.ufshc/by-name/frp
+
+# GPS
+persist.gps.qc_nlp_in_use=1
+persist.loc.nlp_name=com.qualcomm.location
+ro.gps.agps_provider=1
+
+# Media
+debug.stagefright.omx_default_rank.sw-audio=1
+debug.stagefright.omx_default_rank=0
+
+# Memory
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.heapmaxfree=8m
+dalvik.vm.heapminfree=4m
+dalvik.vm.heapsize=512m
+dalvik.vm.heapstartsize=16m
+dalvik.vm.heaptargetutilization=0.75
+
+# Network manager
+persist.data.netmgrd.qos.enable=true
+persist.data.wda.enable=true
+persist.data.df.agg.dl_pkt=10
+persist.data.df.agg.dl_size=4096
+persist.data.df.dev_name=rmnet_usb0
+persist.data.df.dl_mode=5
+persist.data.df.iwlan_mux=9
+persist.data.df.mux_count=8
+persist.data.df.ul_mode=5
+
+# Radio
+DEVICE_PROVISIONED=1
+keyguard.no_require_sim=true
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+persist.radio.multisim.config=dsds
+persist.rmnet.data.enable=true
+persist.sys.fflag.override.settings_network_and_internet_v2=true
+persist.sys.fflag.override.settings_provider_model=false
+ril.subscription.types=NV,RUIM
+ro.telephony.call_ring.multiple=false
+ro.telephony.default_cdma_sub=0
+ro.telephony.default_network=22,20
+ro.telephony.iwlan_operation_mode=legacy
+telephony.lteOnCdmaDevice=1
+
+# RCS
+persist.rcs.supported=1
+
+# SurfaceFlinger
+ro.launcher.blur.appLaunch=0
+ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+ro.surface_flinger.max_virtual_display_dimension=4096
+ro.surface_flinger.protected_contents=true
+ro.surface_flinger.supports_background_blur=0
+
+# System
+persist.sys.binary_xml=false
+
+# TimeService
+persist.timed.enable=true
+
+# VoLTE
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
+# Wlan
+wifi.interface=wlan0
+
+# Zygote preforking
+persist.device_config.runtime_native.usap_pool_enabled=true

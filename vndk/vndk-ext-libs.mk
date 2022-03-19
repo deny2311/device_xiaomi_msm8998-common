@@ -48,6 +48,8 @@ EXTRA_VENDOR_LIBRARIES_64 := \
     libaudioclient \
     libaudiomanager \
     libaudiopolicy \
+    libbinder \
     libmediametrics \
     libmediautils \
-    libnblog
+    libnblog \
+    libpermission

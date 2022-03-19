@@ -34,7 +34,7 @@ do
     echo 50 > $cpubw/polling_interval
     echo "3143 5859 11863 13763" > $cpubw/bw_hwmon/mbps_zones
     echo 4 > $cpubw/bw_hwmon/sample_ms
-    echo 34 > $cpubw/bw_hwmon/io_percent
+    echo 50 > $cpubw/bw_hwmon/io_percent
     echo 20 > $cpubw/bw_hwmon/hist_memory
     echo 10 > $cpubw/bw_hwmon/hyst_length
     echo 0 > $cpubw/bw_hwmon/low_power_ceil_mbps
@@ -46,5 +46,12 @@ do
 done
 
 echo "cpufreq" > /sys/class/devfreq/soc:qcom,mincpubw/governor
+
+# Set up dynamic stune boost
+echo 3000 > /sys/module/cpu_boost/parameters/dynamic_stune_boost_ms
+echo 10 > /sys/module/cpu_boost/parameters/dynamic_stune_boost
+
+# disable thermal and BCL hotplug
+echo 0 > /sys/module/msm_thermal/core_control/enabled
 
 setprop vendor.post_boot.parsed 1

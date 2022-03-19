@@ -44,7 +44,7 @@ public final class DeviceSettings extends PreferenceFragment {
     private static final String KEY_CATEGORY_USB_FASTCHARGE = "usb_fastcharge";
 
     private final String KEY_DEVICE_DOZE = "device_doze";
-    private final String KEY_DEVICE_DOZE_PACKAGE_NAME = "org.lineageos.settings.doze";
+    private final String KEY_DEVICE_DOZE_PACKAGE_NAME = "com.huexxx.settings.doze";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -68,6 +68,10 @@ public final class DeviceSettings extends PreferenceFragment {
             PreferenceCategory displayCategory = findPreference(KEY_CATEGORY_DISPLAY);
             displayCategory.removePreference(findPreference(KEY_DEVICE_DOZE));
         }
+        
+        /* Remove hardware buttons preference for Chiron */
+        PreferenceCategory hwbuttons = findPreference(KEY_CATEGORY_HW_BUTTONS);
+        getPreferenceScreen().removePreference(hwbuttons);                        
     }
 
     @Override

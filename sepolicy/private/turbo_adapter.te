@@ -1,0 +1,1 @@
+allow turbo_adapter google_battery_hwservice:hwservice_manager { add find };

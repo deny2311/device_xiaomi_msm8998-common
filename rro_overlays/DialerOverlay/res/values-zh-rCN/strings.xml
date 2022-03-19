@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="main_menu_call_history">通话记录</string>
+  <string name="tab_title_contacts">联系人</string>
+</resources>

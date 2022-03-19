@@ -2,5 +2,9 @@ dontaudit priv_app bt_firmware_file:filesystem getattr;
 dontaudit priv_app firmware_file:filesystem getattr;
 dontaudit priv_app mnt_vendor_file:dir search;
 
+allow priv_app default_prop:property_service { set };
+allow priv_app init:unix_stream_socket { connectto };
+allow priv_app property_socket:sock_file { write };
 allow priv_app userspace_reboot_config_prop:file rw_file_perms;
+
 get_prop(priv_app, userspace_reboot_config_prop)
