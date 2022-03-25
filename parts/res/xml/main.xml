@@ -33,8 +33,8 @@
             android:title="@string/device_doze_title">
             <intent
                 android:action="android.intent.action.MAIN"
-                android:targetClass="com.huexxx.settings.doze.DozeSettingsActivity"
-                android:targetPackage="com.huexxx.settings.doze" />
+                android:targetClass="org.lineageos.settings.doze.DozeSettingsActivity"
+                android:targetPackage="org.lineageos.settings.doze" />
         </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>
 
@@ -53,6 +53,7 @@
             android:icon="@drawable/ic_vibrate"
             android:key="s2s_vib_strength"
             android:title="@string/s2s_vib_strength_title_head"
+			android:dependency="sweep2sleep"
             android:max="90"
             android:min="0"
             android:defaultValue="20"/>
@@ -105,6 +106,21 @@
                 android:action="android.intent.action.MAIN"
                 android:targetClass="org.xiaomi.dirac.dirac.DiracActivity"
                 android:targetPackage="org.xiaomi.dirac" />
+        </androidx.preference.Preference>
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.PreferenceCategory
+        android:title="@string/clear_speaker_title">
+
+        <androidx.preference.Preference
+            android:key="clear_speaker_settings" 
+            android:title="@string/clear_speaker_title"
+            android:summary="@string/clear_speaker_summary"
+            android:icon="@drawable/ic_speaker_cleaner_icon" >
+            <intent 
+                android:action="android.intent.action.MAIN" 
+                android:targetClass="org.omnirom.device.speaker.ClearSpeakerActivity"
+                android:targetPackage="org.omnirom.device.speaker" />
         </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>
 
