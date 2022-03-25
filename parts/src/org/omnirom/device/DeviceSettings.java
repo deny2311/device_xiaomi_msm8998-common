@@ -68,10 +68,6 @@ public final class DeviceSettings extends PreferenceFragment {
             PreferenceCategory displayCategory = findPreference(KEY_CATEGORY_DISPLAY);
             displayCategory.removePreference(findPreference(KEY_DEVICE_DOZE));
         }
-        
-        /* Remove hardware buttons preference for Chiron */
-        PreferenceCategory hwbuttons = findPreference(KEY_CATEGORY_HW_BUTTONS);
-        getPreferenceScreen().removePreference(hwbuttons);                        
     }
 
     @Override
