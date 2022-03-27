@@ -3,6 +3,7 @@ allow system_app sysfs_sectouch:file rwx_file_perms;
 allow system_app sysfs_leds:dir search;
 allow system_app {sysfs_sectouch sysfs_graphics }:dir search;
 allow system_app sysfs_graphics:file rwx_file_perms;
+allow system_app sysfs:file { read open write getattr };
 
 # Sweep2sleep
 allow system_app sysfs_sts:file rwx_file_perms;

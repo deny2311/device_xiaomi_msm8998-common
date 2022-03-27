@@ -1,0 +1,2 @@
+allow flipendo init:binder call;
+allow flipendo zygote:unix_stream_socket getopt;
