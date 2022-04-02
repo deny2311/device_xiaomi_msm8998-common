@@ -1,18 +1,1 @@
-allow untrusted_app mnt_sdcard_file:lnk_file { read open };
-allow untrusted_app proc:file { read open getattr };
-allow untrusted_app proc_pid_max:file { read open getattr };
-allow untrusted_app proc_tty_drivers:file { read open getattr };
-allow untrusted_app proc_version:file { read open getattr };
-allow untrusted_app sysfs_graphics:{ file lnk_file } { read open getattr };
-allow untrusted_app sysfs_kgsl:{ file lnk_file } { read open getattr };
-allow untrusted_app system_lib_file:file { read execmod };
-allow untrusted_app vendor_sysfs_kgsl_gpuclk:file { read };
 allow untrusted_app zygote:unix_stream_socket { getopt };
-
-get_prop(untrusted_app, qemu_hw_prop)
-get_prop(untrusted_app, qemu_sf_lcd_density_prop)
-get_prop(untrusted_app, serialno_prop)
-get_prop(untrusted_app, vendor_persist_camera_prop)
-get_prop(untrusted_app, wifi_hal_prop)
-
-r_dir_file(untrusted_app, sysfs_battery_supply)

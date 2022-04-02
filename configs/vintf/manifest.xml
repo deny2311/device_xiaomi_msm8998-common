@@ -206,11 +206,6 @@
         <fqname>@1.0::IBTConfigStore/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.cacert</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IService/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.hardware.cryptfshw</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::ICryptfsHw/default</fqname>
