@@ -1,3 +1,4 @@
 allow hal_power_default sysfs_sectouch:dir search;
 allow hal_power_default sysfs_sectouch:file w_file_perms;
 allow hal_power_default sysfs:file { read open write getattr };
+set_prop(hal_power_default, vendor_power_prop)
