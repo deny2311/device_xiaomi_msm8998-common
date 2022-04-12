@@ -148,8 +148,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.dbg.ims_volte_enable=1 \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1 \
+    persist.radio.rat_on=combine \
+    persist.radio.data_ltd_sys_ind=1 \
+    persist.radio.data_con_rprt=1 \
+    persist.radio.calls.on.ims=1 \
     persist.vendor.qti.telephony.vt_cam_interface=1
 
 # Media
@@ -195,8 +201,6 @@ PRODUCT_ODM_PROPERTIES += \
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
-    persist.dbg.volte_avail_ovr=1 \
-    persist.dbg.vt_avail_ovr=1 \
     persist.dbg.wfc_avail_ovr=1 \
     persist.radio.multisim.config=dsds \
     persist.rmnet.data.enable=true \
