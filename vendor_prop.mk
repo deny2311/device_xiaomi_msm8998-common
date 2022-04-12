@@ -139,7 +139,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # DPM
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.dpm.feature=1 \
-    persist.vendor.dpm.nsrm.bkg.evt=3955
+    persist.vendor.dpm.nsrm.bkg.evt=3955 \
+    persist.vendor.dpmhalservice.enable=1
 
 # FRP
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -202,7 +203,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.ims.disableQXDMLogs=1 \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.custom_ecc=1 \
+    persist.vendor.radio.enableadvancedscan=false \
     persist.vendor.radio.force_on_dc=true \
+    persist.vendor.radio.procedure_bytes=SKIP \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.redir_party_num=1 \
     persist.vendor.radio.report_codec=1 \
@@ -211,7 +214,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=22,22 \
     ro.vendor.use_data_netmgrd=true \
     telephony.lteOnCdmaDevice=1 \
-    vendor.voice.path.for.pcm.voip=true
+    vendor.voice.path.for.pcm.voip=true \
+    ro.telephony.iwlan_operation_mode=legacy
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \

@@ -395,20 +395,22 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio.config@1.2 \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio@1.2 \
-    android.hardware.radio@1.2.vendor \
-    android.hardware.radio@1.4 \
-    android.hardware.radio@1.4.vendor \
+    android.hardware.radio.config@1.0 \
+    android.hardware.radio.config@1.0.vendor \
+    android.hardware.radio@1.5 \
+    android.hardware.radio@1.5.vendor \
     android.hardware.radio.deprecated@1.0 \
     android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.secure_element@1.0 \
-    android.hardware.secure_element@1.0.vendor \
+    android.hardware.secure_element@1.2 \
+    android.hardware.secure_element@1.2.vendor \
     CarrierConfigOverlay \
     rild \
+    libprotobuf-cpp-full \
     librmnetctl \
-    libprotobuf-cpp-full
+    libxml2
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/qmi_fw.conf:$(TARGET_COPY_OUT_VENDOR)/etc/qmi_fw.conf
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
