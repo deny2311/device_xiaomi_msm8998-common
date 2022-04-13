@@ -202,10 +202,6 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi \
     android.hardware.biometrics.fingerprint@2.1.vendor
 
-# For config.fs
-PRODUCT_PACKAGES += \
-    fs_config_files
-
 # Fwk-detect
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
