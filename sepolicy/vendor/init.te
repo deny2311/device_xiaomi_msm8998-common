@@ -9,3 +9,47 @@ binder_call(init, hal_perf_default)
 
 # OIS
 allow init sysfs_ois:file w_file_perms; 
+
+allow init ion_device:chr_file { read };
+allow init ion_device:chr_file { open };
+allow init device:chr_file { ioctl };
+binder_call(system_suspend, init)
+allow init sysfs:file { write };
+allow init sysfs:file { open };
+allow init sysfs_wake_lock:file { write };
+allow init device:chr_file { read write };
+allow init device:chr_file { open };
+allow init network_stack:netlink_netfilter_socket { read };
+allow init self:netlink_route_socket { create };
+allow init self:netlink_route_socket { setopt };
+binder_call(radio, init)
+allow init proc:file { write };
+allow init sysfs_devices_system_cpu:file { write };
+allow init sysfs:file { read };
+allow init self:socket { read };
+allow init self:socket { write };
+binder_call(hal_graphics_composer_default, init)
+allow init self:capability2 { block_suspend };
+allow init sysfs_wake_lock:file { open };
+allow init self:netlink_kobject_uevent_socket { read };
+allow init netutils_wrapper_exec:file { execute };
+allow init netutils_wrapper_exec:file { read open };
+allow init netutils_wrapper_exec:file { execute_no_trans };
+allow init netutils_wrapper_exec:file { getattr };
+binder_call(system_server, init)
+allow init device:chr_file { write };
+allow init self:netlink_generic_socket { read };
+allow init self:netlink_generic_socket { write };
+allow init self:netlink_socket { read };
+allow init self:udp_socket { ioctl };
+allow init vendor_data_file:file { lock };
+allow init self:netlink_route_socket { bind };
+allow init self:netlink_route_socket { getattr };
+allow init self:netlink_route_socket { write };
+allow init system_file:file { execute_no_trans };
+binder_call(bluetooth, init)
+binder_call(hal_audio_default, init)
+allow init device:chr_file { read };
+allow init ion_device:chr_file { ioctl };
+binder_call(hal_camera_default, init)
+allow init self:netlink_route_socket { read };

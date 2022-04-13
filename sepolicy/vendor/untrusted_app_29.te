@@ -1,0 +1,6 @@
+allow untrusted_app_29 device:chr_file { ioctl };
+allow untrusted_app_29 device:chr_file { read write };
+allow untrusted_app_29 device:chr_file { open };
+allow untrusted_app_29 adsprpcd_file:file { read };
+allow untrusted_app_29 adsprpcd_file:file { open };
+allow untrusted_app_29 adsprpcd_file:file { getattr };

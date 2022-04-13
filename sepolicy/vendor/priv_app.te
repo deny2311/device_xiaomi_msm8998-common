@@ -7,3 +7,9 @@ allow priv_app userspace_reboot_config_prop:file rw_file_perms;
 get_prop(priv_app, userspace_reboot_config_prop)
 
 allow priv_app per_boot_file:file read;
+
+allow priv_app device:chr_file { ioctl };
+allow priv_app vendor_file:file { getattr };
+allow priv_app vendor_file:file { read };
+allow priv_app vendor_file:file { open };
+allow priv_app device:chr_file { read write };

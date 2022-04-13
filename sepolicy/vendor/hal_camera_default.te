@@ -3,3 +3,15 @@ allow hal_camera_default system_file:file r_file_perms;
 set_prop(hal_camera_default, camera_prop)
 get_prop(hal_camera_default, bootanim_system_prop);
 allow hal_camera_default diag_device:chr_file rw_file_perms;
+
+allow hal_camera_default self:socket { read };
+allow hal_camera_default sysfs:file { read };
+allow hal_camera_default sysfs:file { open };
+allow hal_camera_default device:chr_file { read write };
+allow hal_camera_default self:socket { write };
+allow hal_camera_default device:chr_file { open };
+allow hal_camera_default init:unix_stream_socket { connectto };
+allow hal_camera_default device:chr_file { ioctl };
+allow hal_camera_default mnt_vendor_file:dir { getattr };
+allow hal_camera_default mnt_vendor_file:file { read };
+allow hal_camera_default mnt_vendor_file:file { open };
