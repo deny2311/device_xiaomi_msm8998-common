@@ -91,8 +91,7 @@ PRODUCT_PACKAGES += \
 
 # IFAA
 PRODUCT_PACKAGES += \
-    IFAAService \
-    org.ifaa.android.manager
+    IFAAService
      
 PRODUCT_PACKAGES += \
     libaudio-resampler \
