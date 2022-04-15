@@ -33,4 +33,4 @@ PRODUCT_SYSTEM_PROPERTIES += \
 PRODUCT_SYSTEM_PROPERTIES += \
     rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
     persist.vendor.radio.atfwd.start=true \
-    vendor.service.qti.ims.enabled=1   
+    vendor.service.qti.ims.enabled=1
