@@ -18,35 +18,8 @@
 
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
-
-#include <stdint.h>
-#include <string.h>
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-int property_get(const char *key, char *value, const char *default_value);
-#ifdef __cplusplus
-}
-#endif
-
-static inline const char* BtmGetDefaultName()
-{
-    char product_device[92];
-    property_get("ro.product.device", product_device, "");
-
-    if (strstr(product_device, "chiron"))
-        return "Xiaomi Mi MIX 2";
-    if (strstr(product_device, "sagit"))
-        return "Xiaomi MI 6";
-
-    // Fallback to ro.product.model
-    return "";
-}
-
-#define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
 // Disables read remote device feature
 #define MAX_ACL_CONNECTIONS   16
 #define MAX_L2CAP_CHANNELS    16
-#define BLE_VND_INCLUDED   TRUE
+#define BLE_VND_INCLUDED   TRUE 
 #endif
