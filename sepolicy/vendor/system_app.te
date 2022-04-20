@@ -27,3 +27,6 @@ allow system_app sysfs:file { getattr };
 allow system_app mnt_vendor_file:dir { search };
 
 allow system_app per_boot_file:file read;
+
+#Zygote
+allow system_app zygote:unix_stream_socket { getopt };

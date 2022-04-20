@@ -14,6 +14,7 @@ allow system_server per_boot_file:file { read };
 allow system_server init:binder { call }; 
 
 allow system_server app_zygote:process { getpgid };
+allow system_server init:binder { call };
 
 allow system_server device:chr_file { ioctl };
 allow system_server device:chr_file { read write };

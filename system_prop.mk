@@ -33,4 +33,12 @@ PRODUCT_SYSTEM_PROPERTIES += \
 PRODUCT_SYSTEM_PROPERTIES += \
     rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
     persist.vendor.radio.atfwd.start=true \
-    vendor.service.qti.ims.enabled=1   
+    vendor.service.qti.ims.enabled=1
+
+# Dirac
+audio.dirac.logging=0
+ro.audio.soundfx.dirac=true
+persist.audio.dirac.speaker=true
+persist.dirac.acs.controller=qem
+persist.dirac.acs.storeSettings=1
+persist.dirac.acs.ignore_error=1
