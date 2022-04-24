@@ -1,4 +1,4 @@
-set_prop(system_app,exported_radio_prop)
+set_prop(system_app,radio_control_prop)
 binder_call(system_app, hal_alarm_qti_default)
 
 # Parts

@@ -1,1 +1,2 @@
+allow mediaprovider per_boot_file:file { read };
 allow mediaprovider zygote:unix_stream_socket { getopt };
