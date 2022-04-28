@@ -10,7 +10,6 @@ set_prop(priv_app, userspace_reboot_config_prop)
 
 allow priv_app device:chr_file { ioctl };
 allow priv_app device:chr_file { read write };
-allow priv_app per_boot_file:file read;
 allow priv_app vendor_file:file { getattr };
 allow priv_app vendor_file:file { read };
 allow priv_app vendor_file:file { open };

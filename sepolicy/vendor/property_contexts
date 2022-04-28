@@ -67,6 +67,3 @@ vendor.powerhal.lpm                                           u:object_r:vendor_
 vendor.powerhal.init                                          u:object_r:vendor_power_prop:s0
 vendor.powerhal.rendering                                     u:object_r:vendor_power_prop:s0
 
-# Data files
-/data/per_boot(/.*)?                                          u:object_r:per_boot_file:s0
-
