@@ -42,3 +42,9 @@ persist.audio.dirac.speaker=true
 persist.dirac.acs.controller=qem
 persist.dirac.acs.storeSettings=1
 persist.dirac.acs.ignore_error=1
+
+# DPM
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.dpm.feature=1 \
+    persist.vendor.dpm.nsrm.bkg.evt=3955 \
+    persist.vendor.dpmhalservice.enable=1

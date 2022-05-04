@@ -28,3 +28,6 @@ allow system_app mnt_vendor_file:dir { search };
 
 #Zygote
 allow system_app zygote:unix_stream_socket { getopt };
+
+#HW
+get_prop(system_app, qemu_hw_prop)
