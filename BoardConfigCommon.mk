@@ -124,6 +124,7 @@ TARGET_USES_MKE2FS := true
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 TARGET_USES_INTERACTION_BOOST := true
+TARGET_USES_NON_LEGACY_POWERHAL := true
 
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
@@ -143,13 +144,14 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(PLATFORM_PATH)
 TARGET_USES_OLD_MNC_FORMAT := true
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2020-01-01
+VENDOR_SECURITY_PATCH := 2021-08-01
 
 # SELinux
-include device/qcom/sepolicy-legacy-um/SEPolicy.mk
+#include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/public
+TARGET_USES_QCOM_LEGACY_UM_SEPOLICY := true
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # Treble

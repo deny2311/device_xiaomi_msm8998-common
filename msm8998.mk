@@ -259,17 +259,6 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl \
     android.hardware.health@2.0-service
 
-# HIDL
-PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
-    android.hidl.base@1.0_system \
-    android.hidl.manager@1.0 \
-    android.hidl.manager@1.0_system \
-    libhidltransport \
-    libhidltransport.vendor \
-    libhwbinder \
-    libhwbinder.vendor
-
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
@@ -423,17 +412,6 @@ PRODUCT_PACKAGES += \
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-
-# Telephony
-PRODUCT_PACKAGES += \
-    telephony-ext \
-    qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml \
-    qti-telephony-utils \
-    qti_telephony_utils.xml
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
 
 # Tethering
 PRODUCT_PACKAGES += \
