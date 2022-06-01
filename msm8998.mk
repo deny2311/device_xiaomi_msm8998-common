@@ -376,6 +376,7 @@ PRODUCT_PACKAGES += \
     init.parts.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
+    init.spectrum.rc \
     init.recovery.qcom.rc \
     init.target.rc \
     ueventd.qcom.rc
@@ -477,3 +478,4 @@ PRODUCT_COPY_FILES += \
 
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/msm8998-common/msm8998-common-vendor.mk)
+
