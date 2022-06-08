@@ -17,4 +17,3 @@ set_prop(vendor_init, vendor_power_prop);
 set_prop(vendor_init, vendor_qcom_ims_prop);
 set_prop(vendor_init, vendor_reschedule_service_prop);
 set_prop(vendor_init, vendor_time_service_prop);
-set_prop(vendor_init, spectrum_prop)
