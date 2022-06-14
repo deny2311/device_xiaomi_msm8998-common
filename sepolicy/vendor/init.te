@@ -13,7 +13,6 @@ allow init sysfs_ois:file w_file_perms;
 allow init ion_device:chr_file { read };
 allow init ion_device:chr_file { open };
 allow init device:chr_file { ioctl };
-binder_call(system_suspend, init)
 allow init sysfs:file { write };
 allow init sysfs:file { open };
 allow init sysfs_wake_lock:file { write };
