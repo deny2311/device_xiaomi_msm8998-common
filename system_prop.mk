@@ -20,9 +20,11 @@ PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.fflag.override.settings_provider_model=false \
 
 # BPF
-ro.kernel.ebpf.supported=true
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.kernel.ebpf.supported=true
 
 # Camera
+PRODUCT_SYSTEM_PROPERTIES += \
     vendor.camera.aux.packagelist=com.android.camera,org.lineageos.snap
 
 # RCS
@@ -36,12 +38,13 @@ PRODUCT_SYSTEM_PROPERTIES += \
     vendor.service.qti.ims.enabled=1
 
 # Dirac
-audio.dirac.logging=0
-ro.audio.soundfx.dirac=true
-persist.audio.dirac.speaker=true
-persist.dirac.acs.controller=qem
-persist.dirac.acs.storeSettings=1
-persist.dirac.acs.ignore_error=1
+PRODUCT_SYSTEM_PROPERTIES += \
+    audio.dirac.logging=0 \
+    ro.audio.soundfx.dirac=true \
+    persist.audio.dirac.speaker=true \
+    persist.dirac.acs.controller=qem \
+    persist.dirac.acs.storeSettings=1 \
+    persist.dirac.acs.ignore_error=1
 
 # DPM
 PRODUCT_PROPERTY_OVERRIDES += \
