@@ -61,10 +61,4 @@ gpu.stats.debug.level                                         u:object_r:vendor_
 sdm.                                                          u:object_r:vendor_default_prop:s0
 ro.hwversion                                                  u:object_r:vendor_default_prop:s0
 
-vendor.powerhal.state                                         u:object_r:vendor_power_prop:s0
-vendor.powerhal.audio                                         u:object_r:vendor_power_prop:s0
-vendor.powerhal.lpm                                           u:object_r:vendor_power_prop:s0
-vendor.powerhal.init                                          u:object_r:vendor_power_prop:s0
-vendor.powerhal.rendering                                     u:object_r:vendor_power_prop:s0
-
 persist.cnss-daemon.debug_level                               u:object_r:cnss_prop:s0
