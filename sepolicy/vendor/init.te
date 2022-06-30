@@ -39,7 +39,6 @@ allow init self:udp_socket { ioctl };
 allow init sysfs_cpu_boost:file { write open };
 allow init sysfs_devices_system_cpu:file { write };
 allow init sysfs_fastcharge:file { setattr };
-allow init sysfs_kcal:file { setattr };
 allow init sysfs_msm_power:file { write open };
 allow init sysfs_poweron_alarm:file { write open };
 allow init sysfs_sectouch:file { write open };

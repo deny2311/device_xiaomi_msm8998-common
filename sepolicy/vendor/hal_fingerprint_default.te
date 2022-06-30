@@ -18,10 +18,7 @@ allow hal_fingerprint_default hal_perf_hwservice:hwservice_manager find;
 dontaudit hal_fingerprint_default sysfs_graphics:dir search;
 dontaudit hal_fingerprint_default sysfs_leds:dir search;
 
-set_prop(hal_fingerprint_default, vendor_fp_prop);
-
-allow hal_fingerprint_default sysfs_kcal:dir rw_dir_perms;
-allow hal_fingerprint_default sysfs_kcal:file rw_file_perms;
+set_prop(hal_fingerprint_default, vendor_fp_prop)
 
 allow hal_fingerprint_default power_service:service_manager find;
 allow hal_fingerprint_default vfat:dir { search };

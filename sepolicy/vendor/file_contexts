@@ -28,9 +28,6 @@
 /sys/sweep2sleep/sweep2sleep                                  u:object_r:sysfs_sts:s0
 /sys/sweep2sleep/vib_strength                                 u:object_r:sysfs_sts:s0
 
-# Kcal
-/sys/devices/platform/kcal_ctrl.0(/.*)?                       u:object_r:sysfs_kcal:s0
-
 # FastCharge
 /sys/kernel/fast_charge/force_fast_charge                     u:object_r:sysfs_fastcharge:s0
 
