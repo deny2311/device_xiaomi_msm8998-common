@@ -4,9 +4,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := optional
 LOCAL_STATIC_ANDROID_LIBRARIES := \
-    androidx.core_core \
-    androidx.appcompat_appcompat \
-    androidx.preference_preference
+     SettingsLib
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
     androidx.annotation_annotation
@@ -30,8 +28,6 @@ LOCAL_RESOURCE_DIR := $(package_resource_overlays) $(LOCAL_RESOURCE_DIR)
 
 LOCAL_PROGUARD_ENABLED := disabled
 LOCAL_DEX_PREOPT := true
-
-include frameworks/base/packages/SettingsLib/common.mk
 
 include $(BUILD_PACKAGE)
 
