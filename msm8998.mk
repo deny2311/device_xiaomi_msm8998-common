@@ -271,6 +271,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ims-ext-common \
     ims_ext_common.xml \
+    libgui_shim \
+    libshim_gui \
     libshim_imsvt
 
 PRODUCT_PACKAGES += \
