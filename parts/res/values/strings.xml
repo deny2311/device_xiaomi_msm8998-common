@@ -16,7 +16,7 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Advanced Setting</string>
-	<string name="app_confirm">OK</string>
+    <string name="app_feature_unsupported">Unsupported System</string>
     <string name="advanced_settings">Advanced Setting</string>
     <string name="advanced_settings_summary">Advanced</string>
 
@@ -44,9 +44,10 @@
 
     <!-- Spectrum Profiles -->
     <string name="spectrum_profile_title">Kernel Profiles</string>
-    <string name="spectrum_title">Kernel Profile</string>
     <string name="spectrum_summary">Choose your kernel profile</string>
-    <string name="spectrum_dialogTitle">Choose your kernel profile</string>
+    <string name="spectrum_switch_summary">Enable Spectrum manger</string>
+    <string name="spectrum_switch_title" translatable="false">Spectrum</string>
+    <string name="spectrum_title">Kernel Profile</string>
 
     <!-- Spectrum QS tile -->
     <string name="specturm_qs_prompt_title">A QS title is available now.</string>
@@ -71,6 +72,11 @@
     <string name="sound_title">Sound</string>
     <string name="xiaomi_dirac_title">Mi Sound Enhancer</string>
     <string name="xiaomi_dirac_summary">Optimize audio quality</string>
+
+    <!-- Clear speaker -->
+    <string name="clear_speaker_title">Clear speaker</string>
+    <string name="clear_speaker_summary">Play a 30-second audio to clear the speaker</string>
+    <string name="clear_speaker_description">Run this feature once or twice if you find that your speaker is lightly blocked by dust. Set media volume to maximum.\n\nIf the speaker is blocked heavily, run this feature 2-5 times while shaking your device with the speaker facing downwards.\n\nWARNING: Ensure that any headphones are unplugged.</string>
 
     <!-- seekbar -->
     <string name="seekbar_no_default_value">No default value set</string>

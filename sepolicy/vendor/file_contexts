@@ -13,9 +13,6 @@
 # Light HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_msm8998 u:object_r:hal_light_default_exec:s0
 
-# Mlipay
-/(vendor|system/vendor)/bin/mlipayd@1\.1                       u:object_r:hal_mlipay_default_exec:s0
-
 # Root extra symlink
 /bt_firmware                                                  u:object_r:bt_firmware_file:s0
 /persist                                                      u:object_r:mnt_vendor_file:s0
@@ -38,6 +35,9 @@
 /data/decrypt\.txt                                            u:object_r:thermal_decrypt_file:s0
 /data/vendor/thermal(/.*)?                                    u:object_r:thermal_data_file:s0
 
+# UFS
+/sys/devices/soc/1da4000.ufshc(/.*)?                          u:object_r:sysfs_ufs:s0
+
 # Vibrator
 /sys/devices/virtual/timed_output/vibrator/(/.*)?             u:object_r:sysfs_vibrator:s0
 
@@ -46,3 +46,12 @@
 
 # WiFi
 /vendor/bin/wifi-mac-generator                                u:object_r:wifi-mac-generator_exec:s0
+
+# Mutualex service
+/(vendor|system/vendor)/bin/mutualex                          u:object_r:mutualex_exec:s0
+
+# SystemInfo
+/sys/class/thermal/thermal_zone0/temp                         u:object_r:sysfs_device_info:s0
+/sys/kernel/gpu/gpu_clock                                     u:object_r:sysfs_device_info:s0
+/sys/kernel/gpu/gpu_busy                                      u:object_r:sysfs_device_info:s0
+/sys/class/power_supply/battery/temp                          u:object_r:sysfs_device_info:s0

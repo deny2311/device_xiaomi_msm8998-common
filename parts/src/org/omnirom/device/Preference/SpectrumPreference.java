@@ -22,7 +22,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.SystemProperties;
-import android.text.TextUtils;
 import android.util.AttributeSet;
 
 import androidx.preference.ListPreference;
@@ -30,6 +29,8 @@ import androidx.preference.Preference;
 
 import org.omnirom.device.R;
 import org.omnirom.device.SpectrumTileService;
+
+import java.io.File;
 
 public final class SpectrumPreference extends ListPreference implements
         Preference.OnPreferenceChangeListener {
@@ -42,16 +43,18 @@ public final class SpectrumPreference extends ListPreference implements
      * */
     public static final String SPECTRUM_PREFERENCE_ADD_QS_TILE = "spec_qs";
 	
-    public static final String SPECTRUM_KEY = "spectrum";
+    public static final String PREFERENCE_KEY = "spectrum";
+	
+    static final String SPECTRUM_DEFAULT_PROFILE = "0";
+    static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
 
-    private static final String SPECTRUM_DEFAULT_PROFILE = "0";
-    private static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
-
+    static final File SPECTRUM_INIT_FILE = new File("/vendor/etc/init/init.spectrum.rc");
+	
     public static final KernelFeature<String> FEATURE = new KernelFeature<String>() {
 
         @Override
         public boolean isSupported() {
-            return !TextUtils.isEmpty(SystemProperties.get(SPECTRUM_SYSTEM_PROPERTY, null));
+            return SPECTRUM_INIT_FILE.exists();
         }
 
         @Override
@@ -67,15 +70,13 @@ public final class SpectrumPreference extends ListPreference implements
 
         @Override
         public void applySharedPreferences(String newValue, SharedPreferences sp) {
-            sp.edit().putString(SPECTRUM_KEY, newValue).apply();
+            sp.edit().putString(PREFERENCE_KEY, newValue).apply();
         }
 
         @Override
         public boolean restore(SharedPreferences sp) {
             if(!isSupported()) return false;
-
-            String value = sp.getString(SPECTRUM_KEY, SPECTRUM_DEFAULT_PROFILE);
-            return applyValue(value);
+            return SpectrumPreference.restore(sp, true);
         }
     };
 
@@ -94,6 +95,18 @@ public final class SpectrumPreference extends ListPreference implements
     }
 
     @Override
+    public void onDependencyChanged(Preference dependency, boolean disableDependent) {
+        setVisible(!disableDependent);
+    }
+
+    public static boolean restore(SharedPreferences sp, boolean checkEnabled) {
+        if(checkEnabled && !SpectrumSwitchPreference.isEnabled(sp)) return true;
+
+        String value = sp.getString(PREFERENCE_KEY, SPECTRUM_DEFAULT_PROFILE);
+        return FEATURE.applyValue(value);
+    }
+	
+    @Override
     protected void onClick() {
         SharedPreferences sp = getSharedPreferences();
 
@@ -102,8 +115,8 @@ public final class SpectrumPreference extends ListPreference implements
             new AlertDialog.Builder(getContext())
                     .setTitle(R.string.specturm_qs_prompt_title)
                     .setMessage(R.string.specturm_qs_prompt_text)
-                    .setPositiveButton(R.string.app_confirm, (dialog, which) -> {
-                        sp.edit().putBoolean(SPECTRUM_PREFERENCE_ADD_QS_TILE,false).apply();
+                    .setPositiveButton(android.R.string.yes, (dialog, which) -> {
+                        sp.edit().putBoolean(SPECTRUM_PREFERENCE_ADD_QS_TILE, false).apply();
                         dialog.dismiss();
                         super.onClick();
                     }).show();

@@ -4,10 +4,6 @@ allow system_app sysfs_leds:dir search;
 allow system_app {sysfs_sectouch sysfs_graphics }:dir search;
 allow system_app sysfs_graphics:file rwx_file_perms;
 
-# Spectrum
-allow system_app spectrum_prop:property_service set;
-get_prop(system_app, spectrum_prop);
-
 # Sweep2sleep
 allow system_app sysfs_sts:file rwx_file_perms;
 
@@ -18,6 +14,13 @@ allow system_app sysfs_kcal:dir { search };
 # FastCharge
 allow system_app sysfs_fastcharge:file rwx_file_perms;
 
+# Spectrum
+allow system_app spectrum_prop:property_service set;
+get_prop(system_app, spectrum_prop);
+
 # Zram
 allow system_app sysfs_zram:dir search;
 allow system_app sysfs_zram:file r_file_perms;
+
+# allow system apps to read battery status
+r_dir_file(system_app, sysfs_battery_supply)

@@ -39,20 +39,27 @@
     </androidx.preference.PreferenceCategory>
 
     <androidx.preference.PreferenceCategory
-        android:key="spectrum_profile"
         android:title="@string/spectrum_profile_title">
 
+        <org.omnirom.device.Preference.SpectrumSwitchPreference
+            android:defaultValue="true"
+            android:icon="@drawable/ic_spectrum_switch"
+            android:key="pref_spectrum_enabled"
+            android:summary="@string/spectrum_switch_summary"
+            android:title="@string/spectrum_switch_title" />
+			
         <org.omnirom.device.Preference.SpectrumPreference
             android:defaultValue="0"
-            android:dialogTitle="@string/spectrum_dialogTitle"
+            android:dialogTitle="@string/spectrum_summary"
             android:entries="@array/spectrum_profiles"
             android:entryValues="@array/spectrum_values"
             android:icon="@drawable/ic_kernel"
             android:key="spectrum"
             android:summary="@string/spectrum_summary"
-            android:title="@string/spectrum_title" />
+            android:title="@string/spectrum_title"
+            android:dependency="pref_spectrum_enabled"/>
     </androidx.preference.PreferenceCategory>
-
+	
     <androidx.preference.PreferenceCategory android:title="@string/s2s_title">
 
         <org.omnirom.device.Preference.SweepToSleepPreference
@@ -68,6 +75,7 @@
             android:icon="@drawable/ic_vibrate"
             android:key="s2s_vib_strength"
             android:title="@string/s2s_vib_strength_title_head"
+            android:dependency="sweep2sleep"
             android:max="90"
             android:min="0"
             android:defaultValue="20"/>
@@ -120,6 +128,21 @@
                 android:action="android.intent.action.MAIN"
                 android:targetClass="org.xiaomi.dirac.dirac.DiracActivity"
                 android:targetPackage="org.xiaomi.dirac" />
+        </androidx.preference.Preference>
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.PreferenceCategory
+        android:title="@string/clear_speaker_title">
+
+        <androidx.preference.Preference
+            android:key="clear_speaker_settings" 
+            android:title="@string/clear_speaker_title"
+            android:summary="@string/clear_speaker_summary"
+            android:icon="@drawable/ic_speaker_cleaner_icon" >
+            <intent 
+                android:action="android.intent.action.MAIN" 
+                android:targetClass="org.omnirom.device.speaker.ClearSpeakerActivity"
+                android:targetPackage="org.omnirom.device.speaker" />
         </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>
 

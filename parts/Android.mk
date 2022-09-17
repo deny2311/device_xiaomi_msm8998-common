@@ -6,7 +6,8 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_STATIC_ANDROID_LIBRARIES := \
     androidx.core_core \
     androidx.appcompat_appcompat \
-    androidx.preference_preference
+    androidx.preference_preference \
+    SettingsLib
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
     androidx.annotation_annotation

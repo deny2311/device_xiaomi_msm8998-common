@@ -119,37 +119,39 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.charger.enable_suspend=true
 
+# Chipset
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.soc.manufacturer=Qualcomm \
+    ro.soc.model=MSM8998
+
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.cne.feature=1
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
+    debug.renderengine.backend=threaded \
     debug.sf.enable_hwc_vds=1 \
     debug.sf.hw=1 \
-    debug.sf.latch_unsignaled=1 \
+    ro.hardware.egl=adreno \
+    ro.hardware.vulkan=adreno \
     ro.opengles.version=196610 \
     vendor.display.disable_partial_split=1 \
     vendor.display.disable_rotator_downscale=1 \
+    vendor.display.disable_scaler=1 \
     vendor.display.disable_skip_validate=1 \
     vendor.display.enable_default_color_mode=1 \
     vendor.display.perf_hint_window=50 \
     vendor.gralloc.enable_fb_ubwc=1
 
-# DPM
+# Dexopt
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.dpm.feature=1 \
-    persist.vendor.dpm.nsrm.bkg.evt=3955
+    pm.dexopt.first-boot=quicken \
+    pm.dexopt.bg-dexopt=everything
 
 # FRP
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.frp.pst=/dev/block/platform/soc/1da4000.ufshc/by-name/frp
-
-# IMS
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.dbg.volte_avail_ovr=1 \
-    persist.dbg.vt_avail_ovr=1 \
-    persist.vendor.qti.telephony.vt_cam_interface=1
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -191,23 +193,30 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_ODM_PROPERTIES += \
     ro.vendor.qti.va_odm.support=1
 
+# Perf
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.extension_library=libqti-perfd-client.so
+
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.multisim.config=dsds \
-    persist.rmnet.data.enable=true \
-    persist.vendor.data.mode=concurrent \
+    persist.vendor.ims.disableADBLogs=1 \
+    persist.vendor.ims.disableDebugLogs=1 \
+    persist.vendor.ims.disableIMSLogs=1 \
+    persist.vendor.ims.disableQXDMLogs=1 \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
+    persist.vendor.radio.atfwd.start=true \
     persist.vendor.radio.custom_ecc=1 \
+    persist.vendor.radio.data_con_rprt=1 \
+    persist.vendor.radio.enableadvancedscan=false \
     persist.vendor.radio.force_on_dc=true \
+    persist.vendor.radio.mt_sms_ack=30 \
+    persist.vendor.radio.procedure_bytes=SKIP \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.redir_party_num=1 \
     persist.vendor.radio.report_codec=1 \
     persist.vendor.radio.sib16_support=1 \
-    rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
-    ro.telephony.default_cdma_sub=0 \
-    ro.telephony.default_network=22,22 \
-    ro.vendor.use_data_netmgrd=true \
-    telephony.lteOnCdmaDevice=1 \
+    vendor.rild.libpath="/vendor/lib64/libril-qc-hal-qmi.so" \
+    vendor.service.qti.ims.enabled=1 \
     vendor.voice.path.for.pcm.voip=true
 
 # Sensors
@@ -230,6 +239,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # SurfaceFlinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
     ro.surface_flinger.max_virtual_display_dimension=4096 \
     ro.surface_flinger.protected_contents=true \
     ro.surface_flinger.vsync_event_phase_offset_ns=2000000 \
@@ -241,9 +251,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.early_gl_phase_offset_ns=3000000 \
     debug.sf.early_gl_app_phase_offset_ns=15000000
 
-# Time services
+# System
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.delta_time.enable=true
+    persist.sys.binary_xml=false
 
 # WFD
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -252,3 +262,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Wlan
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
+    
+# Volte
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.qti.telephony.vt_cam_interface=1
+

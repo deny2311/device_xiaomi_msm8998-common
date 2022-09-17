@@ -104,7 +104,12 @@ on post-fs-data
     chown system system /mnt/vendor/persist/PRSensorData.txt
     chmod 0600 /mnt/vendor/persist/PRSensorData.txt
 
-    setprop vold.post_fs_data_done 1
+    # Create /data/time folder for time-services
+    mkdir /data/vendor/time/ 0700 system system
+
+    # Create directory for thermal engine
+    mkdir /data/vendor/thermal 0771 root system
+    mkdir /data/vendor/thermal/config 0771 root system
 
     # Create PERFD deamon related dirs
     mkdir /data/vendor/perfd 2770 root system
@@ -114,6 +119,23 @@ on post-fs-data
     write /data/vendor/radio/copy_complete 0
     chown radio radio /data/vendor/radio/copy_complete
     chmod 0660 /data/vendor/radio/copy_complete
+
+    # keep that at the end of on post-fs-data
+    # Set indication (checked by vold) that we have finished this action
+    setprop vold.post_fs_data_done 1
+
+service qcom-c_main-sh /vendor/bin/init.class_main.sh
+    class main
+    user root
+    group root system
+    oneshot
+
+on property:vold.decrypt=trigger_restart_framework
+    start qcom-c_main-sh
+    
+service vendor.qrtr-ns /vendor/bin/qrtr-ns -f
+    class core
+    capabilities NET_BIND_SERVICE
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
@@ -183,6 +205,10 @@ on property:sys.boot_completed=1
     chown media audio /sys/kernel/wdsp0/boot
     chown media audio /sys/kernel/wcd_cpe0/fw_name
 
+    # Restrict permissions to socket file
+    # to hide Magisk & co.
+    chmod 440 /proc/net/unix
+
 on property:ro.vendor.ril.mbn_copy_completed=1
     write /data/vendor/radio/copy_complete 1
 
@@ -249,14 +275,6 @@ service vendor.panel-info /vendor/bin/init.panel_info.sh
     class core
     user root
     oneshot
-
-service vendor.ril-daemon2 /vendor/bin/hw/rild -c 2
-    class main
-    socket rild2 stream 660 root radio
-    socket rild-debug2 stream 660 radio system
-    user radio
-    group radio cache inet misc audio sdcard_r sdcard_rw diag log
-    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
 service charger /system/bin/charger
     class charger

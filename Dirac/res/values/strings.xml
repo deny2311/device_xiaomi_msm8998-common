@@ -61,4 +61,8 @@
 
     <!-- QS tile title -->
     <string name="dirac_qs_tile_title">Mi Sound</string>
+
+    <!-- Switch  -->
+    <string name="switch_bar_on">On</string>
+    <string name="switch_bar_off">Off</string>
 </resources>
