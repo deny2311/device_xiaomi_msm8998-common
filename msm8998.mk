@@ -459,6 +459,7 @@ PRODUCT_COPY_FILES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
+    android.hardware.wifi.hostapd@1.0.vendor \
     ipacm \
     IPACM_cfg.xml \
     libwpa_client \
