@@ -326,4 +326,6 @@
     -->
     <integer name="config_keyChordPowerVolumeUp">1</integer>
 
+     <bool name="config_useVideoPauseWorkaround">true</bool>
+
 </resources>
