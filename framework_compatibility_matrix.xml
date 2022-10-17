@@ -24,6 +24,14 @@
         </interface>
     </hal>
     <hal format="hidl">
+	<name>android.hardware.camera.provider</name> 
+        <version>2.4</version>
+	<interface> 
+            <name>ICameraProvider</name>
+	    <instance>legacy</instance>
+	</interface>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.cas</name>
         <version>1.2</version>
         <interface>
@@ -124,6 +132,15 @@
         </interface>
     </hal>
     <hal format="hidl">
+	<name>android.hardware.wifi</name>
+	<version>1.6</version> 
+        <interface>
+            <name>IWifi</name>
+	    <instance>default</instance>
+	</interface>
+    </hal>
+
+    <hal format="hidl">
         <name>android.hardware.wifi.hostapd</name>
         <version>1.3</version>
         <interface>
@@ -136,14 +153,6 @@
         <version>1.4</version>
         <interface>
             <name>ISupplicant</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.wifi</name>
-        <version>1.6</version>
-        <interface>
-            <name>IWifi</name>
             <instance>default</instance>
         </interface>
     </hal>
