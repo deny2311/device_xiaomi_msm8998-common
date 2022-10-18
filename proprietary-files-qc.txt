@@ -52,6 +52,7 @@ system_ext/lib64/vendor.qti.hardware.mwqemadapter@1.0.so|ededac47c5254cebd530034
 system_ext/lib64/vendor.qti.hardware.slmadapter@1.0.so|70635ca85b20a3fa2ee7e7f62613337561b48f66
 system_ext/lib64/vendor.qti.latency@2.0.so|52058b376a37c99bfe67da8e83ab36a1e72972b1
 system_ext/lib64/vendor.qti.latency@2.1.so|18bffeadefcbbb5f3e1b512b0cee4cb39af27b72
+-vendor/app/CACertService/CACertService.apk;PRESIGNED|a3a46b9b30f905f8acbb57322e5b20281fdcad83
 -vendor/app/CneApp/CneApp.apk|13bdf6ba5637d3df3d6d9fb0017f9f56ddc620e7
 -vendor/app/IWlanService/IWlanService.apk|a189d8879b4cf5026db2d6a80abb3a1319e38f0c
 vendor/bin/cnd|07829b294562037b779a6e7244972d7c24e758a5
@@ -103,6 +104,7 @@ vendor/lib64/vendor.qti.data.factory@2.2.so|6951ff98d20902678e8af584c7b4cf89e360
 vendor/lib64/vendor.qti.data.factory@2.3.so|e9992039c400ef5fb57db62e108873a219348b4c
 vendor/lib64/vendor.qti.data.mwqem@1.0.so|cde93c45f93a82091513d31535f188569dda89fe
 vendor/lib64/vendor.qti.data.slm@1.0.so|0b5e88dfdb4fd0fb3c890f0aa3405ef268814da9
+vendor/lib64/vendor.qti.hardware.cacert@1.0.so|1633c31212d1ea9338b79ebfc2476f83424f36ee
 vendor/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so|e4d002e61b2d6a4d3826e0563ee16cac74696833
 vendor/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so|f87a303f7a092c4d18b7db91d5162a777c920817
 vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so|7d80cd3bda9fd34dd1629116124579e5a4a787f5
@@ -182,6 +184,11 @@ vendor/lib64/librpmb.so|6ee3ac316f28cf01ad1e01c8074209d294a298fa
 vendor/lib64/libsecureui.so|65f24fb26da7f0bfd507c04e9efb278a4cdd8c20
 vendor/lib64/libsecureui_svcsock.so|e364290497862270cd01d9be84f0141ea92e92f9
 vendor/lib64/libssd.so|d6758bd01b360be7bb68f35f56978a5e9a21d3c3
+
+# DRM - from Dumplings
+vendor/lib64/libops.so
+vendor/lib64/libqisl.so
+vendor/lib64/libspl.so
 
 # DRM (TUI) - from LA.UM.8.2.r1-07500-sdm660.0
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|d4d025e0a12af87f65104fe07801517938733603
@@ -315,6 +322,7 @@ vendor/lib64/libsmemlog.so|d9ce43b21abf453c58b892ecbfa42b98bc276bc7
 vendor/lib64/libsystem_health_mon.so|2cc55d78ea00b9fe8af9cd88fd8ef8c31ee5f494
 
 # Radio - from LA.UM.9.2.r1-03500-SDMxx0.0
+-system_ext/app/datastatusnotification/datastatusnotification.apk|16a4c13080cd62e5a9722821058cd4d214c223a2
 -system_ext/app/embms/embms.apk|d984b4eeca3333c82550d1114998cb90f1f886d1
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|712ba653c60066e815b62cd54589e8511bcdb8f9
 system_ext/etc/permissions/embms.xml|22e7474091f9f71f02dd0cfc76cfa8848a46f079

@@ -74,7 +74,7 @@
     </hal>
     <hal format="hidl">
         <name>android.hardware.radio</name>
-        <version>1.0-6</version>
+        <version>1.0-5</version>
         <interface>
             <name>IRadio</name>
             <instance>slot1</instance>
@@ -103,22 +103,6 @@
         <version>2.2</version>
         <interface>
             <name>ISoundTriggerHw</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.wifi.hostapd</name>
-        <version>1.3</version>
-        <interface>
-            <name>IHostapd</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.wifi.supplicant</name>
-        <version>1.4</version>
-        <interface>
-            <name>ISupplicant</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -242,6 +226,14 @@
         <version>1.0</version>
         <interface>
             <name>IBTConfigStore</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.cacert</name>
+        <version>1.0</version>
+        <interface>
+            <name>IService</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -377,6 +369,14 @@
         </interface>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.hardware.soter</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISoter</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.hardware.tui_comm</name>
         <version>1.0</version>
         <interface>
@@ -407,6 +407,14 @@
         <interface>
             <name>IRTPService</name>
             <instance>imsrtpservice</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.xiaomi.hardware.mlipay</name>
+        <version>1.1</version>
+        <interface>
+            <name>IMlipayService</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">

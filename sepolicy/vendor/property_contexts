@@ -28,6 +28,10 @@ gf.debug.                                                     u:object_r:vendor_
 persist.vendor.sys.fp.                                        u:object_r:vendor_fp_prop:s0
 ro.boot.fpsensor                                              u:object_r:vendor_fp_prop:s0
 
+# Mlipay
+persist.vendor.sys.pay.ifaa                                   u:object_r:vendor_tee_listener_prop:s0
+persist.vendor.sys.pay.soter                                  u:object_r:vendor_tee_listener_prop:s0
+
 # Radio
 persist.sys.labtest_flag                                      u:object_r:telephony_status_prop:s0
 ro.build.software.version                                     u:object_r:vendor_qcom_ims_prop:s0
