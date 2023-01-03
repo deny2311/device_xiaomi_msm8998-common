@@ -148,17 +148,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0
 
 PRODUCT_PACKAGES += \
-    audioclient-types-aidl-cpp.vendor_32 \
-    audioflinger-aidl-cpp.vendor_32 \
-    audiopolicy-aidl-cpp.vendor_32 \
-    av-types-aidl-cpp.vendor_32 \
-    libandroid_runtime_lazy.vendor_32 \
-    libaudioclient_aidl_conversion.vendor_32 \
-    libaudiofoundation.vendor_32 \
     libmedia_omx.vendor_32 \
     libmemunreachable.vendor_32 \
-    libshmemcompat.vendor_32 \
-    mediametricsservice-aidl-cpp.vendor_32
+    libshmemcompat.vendor_32
 
 # Control groups and task profiles
 PRODUCT_COPY_FILES += \
@@ -435,8 +427,7 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_PACKAGES += \
     libdng_sdk.vendor_32 \
-    libstdc++.vendor_32 \
-    vndk-ext
+    libstdc++.vendor_32
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm/arch-arm-armv7-a-neon/shared/vndk-core/libpiex.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpiex-v29.so
